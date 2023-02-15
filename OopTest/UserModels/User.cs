@@ -10,7 +10,7 @@ namespace OopTest
 		private string password;		// field
 		public string Password			// property
 		{
-			//get { return password;  } // commented out. We don't want to 'get' the password
+			//get { return password; }  // commented out. We don't want to 'get' the password. As you can see, the getter (and setter) are optional
 			set { password = value; }	// we can set the password if needed.
 		}
 

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace OopTest
 {
 	public static class UserDatabase
@@ -27,13 +28,17 @@ namespace OopTest
 			return allUsers.Find(u => u.EmailAddress == email);
 		}
 
-		public static string AddUser(User userToAdd) // returns a string to verify that a student was added
+        // returns a string to verify to the user that a student was added successfully. This could be void. 
+        public static string AddUser(User userToAdd) 
 		{
 			string response = "Unknown error occurred.";
 
+			// We expect this to always work in this example...
+			// But in a situaton where we are connecting to a database or writing to a file,
+			// it's possible that the connection might be bad and throw an exception
+
 			try
 			{
-
 				allUsers.Add(userToAdd);
 
 				if (IsValidUser(userToAdd.EmailAddress))

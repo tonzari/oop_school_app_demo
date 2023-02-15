@@ -1,7 +1,7 @@
 ﻿
 using OopTest;
 
-Console.WriteLine("Weclome to the School Online System! Please login in to continue.");
+Console.WriteLine("Welcome to the School Online System! Please login in to continue.");
 
 do
 {
@@ -11,13 +11,15 @@ do
     Console.Write("\nEnter your password: ");
     string userInputPassword = Console.ReadLine();
 
-    if (UserDatabase.IsValidUser(userInputEmail))
+    if (UserDatabase.HasEmailAddress(userInputEmail))
     {
-        User user = UserDatabase.GetUser(userInputEmail);
+        User loggedInUser = UserDatabase.GetUser(userInputEmail);
 
-        if (user.VerifyPassword(userInputPassword))
+        if (loggedInUser.VerifyPassword(userInputPassword))
         {
-            switch (user)
+            // Route user to correct menu
+
+            switch (loggedInUser)
             {
                 case Student student:
 
@@ -136,7 +138,7 @@ static void LoadSystemAdminPanel(SystemAdmin systemAdmin)
                 Console.Write("Please enter the email address of the student account you wish to remove: ");
                 string userEmailToDelete = Console.ReadLine();
 
-                if (UserDatabase.IsValidUser(userEmailToDelete))
+                if (UserDatabase.HasEmailAddress(userEmailToDelete))
                 {
                     User userToDelete = UserDatabase.GetUser(userEmailToDelete);
 
