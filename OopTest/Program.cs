@@ -64,6 +64,8 @@ do
  * 
  * We will focus heavily on the System Admin, and their ability to Add/Remove students/teachers
  * 
+ * To clean up our app...
+ * Everything below could be moved into a Menu class, for example.
  * 
  */
 
@@ -74,6 +76,8 @@ static void LoadStudentPortal(Student student)
     Console.WriteLine($"Major: {student.Major}");
 
     // Can give students ability to see their list of courses, or list of grades...
+    Console.WriteLine("\nSorry... The Student Portal is under construction... [hit enter to exit]" );
+    Console.ReadLine();
 }
 
 static void LoadTeacherLMS(Teacher teacher)
@@ -82,6 +86,8 @@ static void LoadTeacherLMS(Teacher teacher)
     Console.WriteLine($"Salary: {teacher.Salary}");
 
     // Can give teachers the ability to see list of their courses, list of their students with grades, their salary info, remove student from class...
+    Console.WriteLine("\nSorry... The Teacher Learning Management System is under construction... [hit enter to exit]");
+    Console.ReadLine();
 }
 
 static void LoadSystemAdminPanel(SystemAdmin systemAdmin)
