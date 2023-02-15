@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1705.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopTest", "OopTest.csproj", "{34D39EED-421B-4A22-A27E-3A46645A55F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopTest", "OopTest/OopTest.csproj", "{34D39EED-421B-4A22-A27E-3A46645A55F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
